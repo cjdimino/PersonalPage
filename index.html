@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+<style>
+</style>
+<script>
+$(function() {
+$( '.dragbox' ).draggable({ stack: '.dragbox', containment: 'window',snap: true,snapTolerance: 7 ,distance: 0,cursor: "move" });
+});
+</script><title>CJDimino</title>
+
+<style type="text/css">
+#header {
+background-color: inherit;
+text-align: center;
+display: block;
+padding-bottom: 0px;
+margin-bottom: 0px;
+margin-left: auto;
+margin-right: auto;
+min-width: 330px;
+width: 100%;
+}
+#header ul {
+margin-left: 0;
+padding-left: 0;
+}
+#header li {
+display: inline;
+padding-right: 10px;
+font-weight: bold;
+font-family: "Times New Roman",Times,serif;
+list-style-type: none;
+}
+#header h1 {
+font-family: "Times New Roman",Times,serif;
+font-weight: normal;
+cursor:default;
+}
+body {
+min-width: 25%;
+background-color: #ffffff;
+}
+#nav ul {
+margin: 0px 0px 0px 0;
+padding-top: 0px;
+padding-left: 0px;
+text-align: center;
+min-width: 25px;
+width: 100%;
+}
+#nav li {
+border-style: solid;
+border-color: #222222;
+padding: 1px 4px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px;
+-moz-border-radius-bottomright: 5px;
+-moz-border-radius-bottomleft: 5px;
+list-style-type: none;
+display: inline;
+font-weight: bold;
+font-family: "Times New Roman",Times,serif;
+}
+#nav {
+border-style: none;
+border-width: 4px;
+font-weight: bold;
+font-size: 1.2em;
+padding-bottom: 0px;
+margin-top: 1px;
+margin-right: auto;
+min-width: 330px;
+margin-left: auto;
+width: 100%;
+display:none;
+}
+#nav a {
+text-decoration: none;
+color: black;
+display:none;
+}
+#wrapper {
+width:90%;
+margin-right: auto;
+margin-left: auto;
+height:100%;
+display:block;
+}
+#nav li:hover {
+background-color: white;
+}
+#body {
+margin-top: 5%;
+text-align: center;
+}
+.dragtitle
+{
+border:3px double black;
+margin-bottom:3px;
+text-align:center;
+}
+.dragtitle a{
+color:black;
+text-decoration:none;
+text-align:center;
+}
+.dragbox{
+position:absolute;
+min-width:350px;
+padding: 3px;
+background-color: #fff5e4;
+box-shadow: 3px 3px 4px #333;
+border:1px solid black;
+left:35%;
+}
+.dragbox:hover{
+cursor:move;
+}
+#box1{
+top:150px;
+}
+#box2{
+top:200px;
+}
+#box3{
+width:620px;
+top:250px;
+}
+#box4
+{
+width:560px;
+top:300px;
+}
+#box5
+{top:350px;
+width:360px;
+}
+.shadow {
+}
+.up {
+text-align:left;
+}
+.arrow{
+display:inline;
+margin-right:-50px;
+padding-left:50px;
+}
+#detail{
+display:none;
+}
+#themeselector{
+margin:0;
+text-decoration:underline;
+}
+#themeselector li {
+cursor:pointer;
+padding:0;
+margin:0;
+}
+#themes{
+cursor:default;
+}
+#themetitle{
+margin:0;
+}
+</style>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-35487323-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+function sendUp(mover)
+{
+var obj = document.getElementById(mover);
+obj.style.zIndex +=1;
+}
+function sendDown(mover)
+{
+var obj = document.getElementById(mover);
+obj.style.zIndex =0;
+}
+<!--
+if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) {
+location.replace("mobileindex.html");
+}
+-->
+$.runOnLoad=function()
+{
+$('.fadeContent').hide('200');
+}
+</script>
+</head>
+<body id="main">
+<div id="wrapper">
+<div id="header">
+<h1 id="title">cjdimino.com</h1>
+<ul id="detail">
+<li>Curator</li>
+<li>Podcaster</li>
+<li>Man of the People</li>
+<li>Alcohol Enthusiast</li>
+</ul>
+<h3></h3>
+</div>
+<div id="nav">
+<ul>
+<li><a href="http://www.twitter.com/cjdimino">Twitter</a></li>
+<li><a href="http://www.SuperGoodNetwork.com">SGN</a></li>
+<li><a href="http://www.twitch.tv/cjdimino">TwitchTV</a></li>
+<li><a href="http://www.youtube.com/TheCJDimino">YouTube</a></li>
+<li><a href="http://www.facebook.com/CJ.Dimino">Facebook</a></li>
+</ul>
+</div>
+<div id="body">
+<div id="box1" class="dragbox">
+<div class="dragtitle" id="tit1"><a href="#" onclick="$('#twitter').toggle(200);">Personal
+Twitter</a>
+</div>
+<div id="twitter" onload="$('#twitter').hide();" class="fadeContent"><a class="twitter-timeline" href="https://twitter.com/cjdimino" data-widget-id="253001887731810305">Tweets by @cjdimino</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+</div>
+</div>
+<div id="box2" class="dragbox">
+<div class="dragtitle"><a href="#" onclick="$('#twitter2').toggle(200);">Super Good Network
+Twitter</a>
+</div>
+<div id="twitter2" class="fadeContent">
+<a class="twitter-timeline" href="https://twitter.com/SuperGoodNet" data-widget-id="253157327459467264">Tweets by @SuperGoodNet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+</div>
+<div id="box3" class="dragbox">
+<div class="dragtitle"><a href="#" onclick="$('#twitch').toggle(200);">Twitch.TV</a>
+</div>
+<div id="twitch" class="fadeContent">
+<object type="application/x-shockwave-flash" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=cjdimino" bgcolor="#000000" height="378" width="620"><param name="allowFullScreen" value="true"><param name="allowScriptAccess" value="always"><param name="allowNetworking" value="all"><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf"><param name="flashvars" value="hostname=www.twitch.tv&amp;channel=cjdimino&amp;auto_play=true&amp;start_volume=25"></object><a href="http://www.twitch.tv/cjdimino" class="trk" style="padding: 2px 0px 4px; display: block; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;">Watch
+live video from cjdimino on www.twitch.tv</a></div>
+</div>
+<div id="box4" class="dragbox">
+<div class="dragtitle"><a href="#" onclick="$('#youtube').toggle(200);">Youtube Favorites</a>
+</div>
+<div id="youtube" class="fadeContent">
+<iframe src="http://www.youtube.com/embed/videoseries?list=FLGZN_ZbnFFv5HBwDOL0KiPQ&amp;hl=en_US" allowfullscreen="" frameborder="0" height="315" width="560"></iframe></div>
+</div>
+<div id="box5" class="dragbox">
+<div class="dragtitle"><a href="#" onclick="$('#facebook').toggle(200);">Facebook</a></div>
+<div id="facebook" class="fadeContent">
+<a href="https://www.facebook.com/CJ.Dimino" target="_TOP" title="Cj Dimino"><img src="https://badge.facebook.com/badge/702905133.11391.982996221.png" style="border: 0px none ;"></a></div>
+</div>
+<div id="box6" class="dragbox">
+<div class="dragtitle"><a href="#" onclick="$('#option').toggle(200);">Options</a></div>
+<div id="option" class="fadeContent">
+<div id="themes">
+<p id="themetitle">Themes</p>
+<ul id="themeselector">
+<li id="theme1">Default</li>
+<li id="theme2">Dark</li>
+<li id="theme3">Dirty Bird</li>
+<li id="theme4">True Blue</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script>
+$(window).dblclick(function() {
+$('.fadeContent').hide(200);
+});
+$('#title').hover(function(){$('#detail').fadeToggle('50');});
+$(document).ready(function() {
+$('.fadeContent').delay(1500).toggle(200);
+$('#box1').animate({top: '15%', left: '15%'});
+$('#box2').animate({top: '15%', left: '65%'});
+$('#box3').animate({top: '25%', left: '32%'});
+$('#box4').animate({top: '20%', left: '35%'});
+$('#box5').animate({top: '15%', left: '40%'});
+$('#box6').animate({top: '75%', left: '40%'});
+});
+$('#theme2').click(function () {
+$('#main').animate({'color' : 'white'},{queue: false});
+$('#title').animate({'color' : 'white'},{queue: false});
+$('#detail').animate({'color' : 'white'},{queue: false});
+$('#main').animate({'background-color' : 'black'},{queue: false});
+$('.dragbox').animate({'background-color' : 'gray'},{queue: false});
+$('.dragbox').animate({'border-color' : 'white'},{queue: false});
+$('.dragbox').animate({'box-shadow' : '3px 3px 4px white'},{queue: false});
+$('.dragtitle').animate({'border-color' : 'black'},{queue: false});
+$('a').animate({'color' : 'white'},{queue: false});
+});
+$('#theme1').click(function () {
+$('#main').animate({'color' : 'black'},{queue: false});
+$('#title').animate({'color' : 'black'},{queue: false});
+$('#detail').animate({'color' : 'black'},{queue: false});
+$('#main').animate({'background-color' : 'white'},{queue: false});
+$('.dragbox').animate({'background-color' : '#fff5e4'},{queue: false});
+$('.dragbox').animate({'border-color' : 'black'},{queue: false});
+$('.dragbox').animate({'box-shadow' : '3px 3px 4px #333'},{queue: false});
+$('.dragtitle').animate({'border-color' : 'black'},{queue: false});
+$('a').animate({'color' : 'black'},{queue: false});
+});
+$('#theme3').click(function () {
+$('#main').animate({'color' : 'white'},{queue: false});
+$('#title').animate({'color' : 'white'},{queue: false});
+$('#detail').animate({'color' : 'white'},{queue: false});
+$('#main').animate({'background-color' : '#c02743'},{queue: false});
+$('.dragbox').animate({'background-color' : '#222'},{queue: false});
+$('.dragbox').animate({'border-color' : 'black'},{queue: false});
+$('.dragbox').animate({'box-shadow' : '3px 3px 4px #333'},{queue: false});
+$('.dragtitle').animate({'border-color' : '#c02743'},{queue: false});
+$('a').animate({'color' : 'white'},{queue: false});
+});
+$('#theme4').click(function () {
+$('#main').animate({'color' : 'black'},{queue: false});
+$('#title').animate({'color' : 'white'},{queue: false});
+$('#detail').animate({'color' : 'white'},{queue: false});
+$('#main').animate({'background-color' : '#031136'},{queue: false});
+$('.dragbox').animate({'background-color' : 'white'},{queue: false});
+$('.dragbox').animate({'border-color' : 'black'},{queue: false});
+$('.dragbox').animate({'box-shadow' : '3px 3px 4px #957f46'},{queue: false});
+$('.dragtitle').animate({'border-color' : '#957f46'},{queue: false});
+$('a').animate({'color' : 'black'},{queue: false});
+});
+</script>
+</body></html>

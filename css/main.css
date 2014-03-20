@@ -92,6 +92,25 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+div.center{
+text-align: center;
+}
+
+ul li.inline{
+    display:inline-block;
+
+}
+
+ul#contact{
+    display:inline-block;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+
+}
+
 
 
 

@@ -92,25 +92,42 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-div.center{
+
+
+.center{
 text-align: center;
 }
 
 ul li.inline{
     display:inline-block;
+    list-style: none;
+    margin-left:4%;
+}
+ul li.inline:nth-of-type(1){
 
+    margin-left:0px;
 }
 
-ul#contact{
+.list{
     display:inline-block;
     text-align: left;
+    margin-top: 0;
+}
+
+.listlabel{
+    margin: 0px 0px;
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 0;
 
 }
 
+ul#descriptors {
+    padding: 0;
+    margin-top: 0;
+}
 
 
 

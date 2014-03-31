@@ -136,18 +136,33 @@ ul#descriptors {
     margin-top:0px;
 }
 
-#nav li:hover{
 
-    background:rgb(252, 208, 75);
-    color:black;
-
-}
 #nav li{
     color:white;
     padding: 10px;
-    margin-left:0px;
-    margin-right: 0px;
-/*border-right:1px solid black;    */
+    margin: 0;
+}
+
+#nav li a{
+    color:white;
+    padding: 10px;
+    margin:0px;
+    text-decoration:none;
+
+}
+
+#nav li:not(.current):hover{
+    -webkit-filter:none;
+    -moz-filter:none;
+    -o-filter:none;
+    -ms-filter:none;
+}
+
+#nav li:not(.current){
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
 }
 
 

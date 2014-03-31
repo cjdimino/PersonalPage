@@ -122,22 +122,26 @@ ul li.inline:nth-of-type(1){
     margin: 0px 0px;
 }
 
-h1 {
-    text-align: center;
+.title{
+    margin-top:1px;
+    padding-top: 0px;
     margin-bottom: 0;
+
+
 
 }
 
+
 ul#descriptors {
     padding: 0;
-    margin-top: 0;
+    margin: 0px;
 }
 
 
 #nav ul {
     padding-left: 0px;
     background:#0099cc;
-    margin-top:0px;
+    margin:0;
 
 }
 

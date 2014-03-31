@@ -16,7 +16,8 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body onload="document.body.setAttribute('class','loaded')">
+
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -33,9 +34,9 @@
 
         <div class="center">
             <ul id = "descriptors">
-                <li class = "inline">Student</li>
-                <li class = "inline">Broadcaster</li>
-                <li class = "inline">Developer</li>
+                <li class = "inline" id = "student">Student</li>
+                <li class = "inline" id = "broadcaster">Broadcaster</li>
+                <li class = "inline" id = "developer">Developer</li>
             </ul>
         </div>
         <div class = "center">

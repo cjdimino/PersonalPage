@@ -126,11 +126,8 @@ ul li.inline:nth-of-type(1){
     margin-top:1px;
     padding-top: 0px;
     margin-bottom: 0;
-
-
-
+    font-weight: 100;
 }
-
 
 ul#descriptors {
     padding: 0;
@@ -173,16 +170,31 @@ ul#descriptors {
     -o-filter: blur(2px);
     -ms-filter: blur(2px);
 
-    transition:-webkit-filter .15s;
-    transition:-moz-filter .15s;
-    transition:-o-filter .15s;
-    transition:-ms-filter .15s;
+    transition:-webkit-filter .08s;
+    transition:-moz-filter .08s;
+    transition:-o-filter .08s;
+    transition:-ms-filter .08s;
 }
 
+#descriptors li{
+    opacity:0;
+}
 
+body.loaded #descriptors li{
+    opacity: 1;
+}
 
+#student{
+    transition: opacity 1.5s linear 0s;
+}
 
+#broadcaster{
+    transition: opacity 1.5s linear 2s;
+}
 
+#developer{
+    transition: opacity 1.5s linear 4s;
+}
 
 
 

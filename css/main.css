@@ -93,7 +93,11 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body{
+background-color:#C8E0E8 ;
 
+
+}
 .center{
 text-align: center;
 }
@@ -132,8 +136,9 @@ ul#descriptors {
 
 #nav ul {
     padding-left: 0px;
-    background:rgb(0, 153, 204);
+    background:#0099cc;
     margin-top:0px;
+
 }
 
 

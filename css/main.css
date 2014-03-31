@@ -163,6 +163,11 @@ ul#descriptors {
     -moz-filter: blur(2px);
     -o-filter: blur(2px);
     -ms-filter: blur(2px);
+
+    transition:-webkit-filter .15s;
+    transition:-moz-filter .15s;
+    transition:-o-filter .15s;
+    transition:-ms-filter .15s;
 }
 
 

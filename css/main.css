@@ -130,6 +130,27 @@ ul#descriptors {
 }
 
 
+#nav ul {
+    padding-left: 0px;
+    background:rgb(0, 153, 204);
+    margin-top:0px;
+}
+
+#nav li:hover{
+
+    background:rgb(252, 208, 75);
+    color:black;
+
+}
+#nav li{
+    color:white;
+    padding: 10px;
+    margin-left:0px;
+    margin-right: 0px;
+/*border-right:1px solid black;    */
+}
+
+
 
 
 
